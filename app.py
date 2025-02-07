@@ -9,9 +9,9 @@ from datetime import datetime
 # Thresholds and counters
 min_aer_day = 0.20
 min_aer_night = 0.17
-mar_threshold = 0.75
+mar_threshold = 1.13
 eye_arc_frames = 10
-yawn_frames = 15
+yawn_frames = 2
 
 counter = 0
 yawn_counter = 0
@@ -124,7 +124,7 @@ def main():
             cv2.putText(frame, f'MAR: {mar:.2f}' if mar else 'MAR: --', (5, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 1)
             cv2.putText(frame, f'Fatigue Index: {fatigue_index}', (5, 100), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 1)
             cv2.putText(frame, f'Brightness: {brightness:.2f}', (5, 120), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 1)
-            cv2.putText(frame, f'Mode: {"Day" if min_aer == min_aer_day else "Night"}', (5, 140), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 1)
+            cv2.putText(frame, f'Mode: {"Light" if min_aer == min_aer_day else "Night"}', (5, 140), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 1)
             cv2.putText(frame, "Press 'Q' to quit", (5, 160), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 0, 0), 1)
 
             # Show the frame
