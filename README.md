@@ -1,4 +1,4 @@
-# EyesOn - AI-Powered Drowsiness Detection
+# EyesOn: AI-Powered Drowsiness Detection
 
 ## Overview
 
